@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
+[ext_resource path="res://Images/EmFBAdVW0AMDStC.jpg" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -198,3 +199,9 @@ position = Vector2( -472.219, 404.428 )
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 629.91, 337.962 )
+scale = Vector2( 1.14016, 1.14104 )
+texture = ExtResource( 7 )
