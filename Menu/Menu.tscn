@@ -82,6 +82,7 @@ __meta__ = {
 }
 
 [node name="Quit" type="Button" parent="Layout/Main/Buttons"]
+modulate = Color( 0.992157, 0, 0, 1 )
 margin_top = 434.0
 margin_right = 941.0
 margin_bottom = 648.0
@@ -102,7 +103,7 @@ text = "Copyright Max Shoe 2023"
 
 [node name="Sprite" type="Sprite" parent="Layout"]
 show_behind_parent = true
-position = Vector2( 649.701, 367.352 )
-scale = Vector2( 4.18379, 4.32181 )
+position = Vector2( 646.104, 352.288 )
+scale = Vector2( 4.16131, 4.15443 )
 texture = ExtResource( 5 )
 [connection signal="pressed" from="Layout/Main/Buttons/Start Game Button" to="Layout/Main/Buttons/Start Game Button" method="_on_Start_Game_Button_pressed"]
