@@ -15,4 +15,6 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print("Game Over")
-
+	GlobalVariables.bulletInstanceCount = 0
+	
+	get_tree().change_scene("res://Menu/Menu.tscn")

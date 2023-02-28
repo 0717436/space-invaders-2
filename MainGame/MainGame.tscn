@@ -6,7 +6,7 @@
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
-[ext_resource path="res://Images/EmFBAdVW0AMDStC.jpg" type="Texture" id=7]
+[ext_resource path="res://Images/space.jpg" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -206,6 +206,6 @@ autoplay = true
 
 [node name="Sprite" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 629.91, 337.962 )
-scale = Vector2( 1.14016, 1.14104 )
+position = Vector2( 642.217, 347.632 )
+scale = Vector2( 0.695138, 0.72911 )
 texture = ExtResource( 7 )
