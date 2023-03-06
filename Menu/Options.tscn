@@ -19,7 +19,7 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 193.0
+margin_right = 189.0
 margin_bottom = 40.0
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
@@ -36,7 +36,7 @@ script = ExtResource( 1 )
 
 [node name="return" type="Button" parent="VBoxContainer"]
 margin_top = 44.0
-margin_right = 193.0
+margin_right = 189.0
 margin_bottom = 64.0
 text = "Return to Main Menu"
 script = ExtResource( 2 )
