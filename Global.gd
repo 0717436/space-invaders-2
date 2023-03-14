@@ -5,6 +5,8 @@ var enemyBulletInstanceCount = 0
 
 var automaticFiring = false
 
+var hardMode = false
+
 var scoringInformation = {
 	"currentScore": 0,
 	"currentPlayer": "User",

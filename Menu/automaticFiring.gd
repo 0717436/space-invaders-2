@@ -7,4 +7,4 @@ func _ready():
 
 func _on_automaticFiring_pressed():
 	print(pressed)
-	GlobalVariables.automaticFiring = pressed
+	GlobalVariables.hardMode = pressed

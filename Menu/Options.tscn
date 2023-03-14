@@ -34,14 +34,32 @@ margin_right = 189.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
 
-[node name="return" type="Button" parent="VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 44.0
 margin_right = 189.0
-margin_bottom = 64.0
+margin_bottom = 84.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 13.0
+margin_right = 70.0
+margin_bottom = 27.0
+text = "Hard Mode"
+
+[node name="hardMode" type="CheckButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 74.0
+margin_right = 150.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="return" type="Button" parent="VBoxContainer"]
+margin_top = 88.0
+margin_right = 189.0
+margin_bottom = 108.0
 text = "Return to Main Menu"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/automaticFiring" to="VBoxContainer/HBoxContainer/automaticFiring" method="_on_automaticFiring_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/hardMode" to="VBoxContainer/HBoxContainer2/hardMode" method="_on_automaticFiring_pressed"]
 [connection signal="pressed" from="VBoxContainer/return" to="VBoxContainer/return" method="_on_return_pressed"]
