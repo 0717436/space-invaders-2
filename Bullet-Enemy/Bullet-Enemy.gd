@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 var speed = 500
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GlobalVariables.enemyBulletInstanceCount += 1
@@ -17,7 +16,6 @@ func _physics_process(delta):
 		else:
 			queue_free()
 			GlobalVariables.enemyBulletInstanceCount -= 1
-			print("Enemy Bullets: ", GlobalVariables.enemyBulletInstanceCount)
 			if "Player" in collidedObject.collider.name:
 				get_tree().change_scene("res://Menu/Menu.tscn")
 

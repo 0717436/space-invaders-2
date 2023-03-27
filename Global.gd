@@ -13,3 +13,8 @@ var scoringInformation = {
 	"highScore": 0,
 	"highScorePlayersName": "Winner"
 }
+
+var previousScores = [203,20,245,13,199]
+
+func calculateAverageScore():
+	var _average = previousScores

@@ -10,6 +10,8 @@ extents = Vector2( 28.2527, 19.3905 )
 extents = Vector2( 39.9933, 52.9882 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
