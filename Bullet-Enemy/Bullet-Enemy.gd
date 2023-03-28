@@ -21,6 +21,6 @@ func _physics_process(delta):
 
 func _process(delta):
 	if GlobalVariables.hardMode:
-		speed = 1000
+		speed = 2000
 	else:
 		speed = 500

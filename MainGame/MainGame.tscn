@@ -61,6 +61,7 @@ text = "0"
 "left",
 ]]
 position = Vector2( -1.53629, 369.479 )
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
 position = Vector2( -5.37704, -0.768158 )
@@ -70,6 +71,8 @@ shape = SubResource( 1 )
 "right",
 ]]
 position = Vector2( 1287.42, 368.711 )
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
 position = Vector2( -5.37704, -0.768158 )
