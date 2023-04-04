@@ -102,7 +102,7 @@ text = "Copyright Max Shoe 2023"
 
 [node name="Sprite" type="Sprite" parent="Layout"]
 show_behind_parent = true
-position = Vector2( 646.104, 352.288 )
+position = Vector2( 644.434, 352.288 )
 scale = Vector2( 13.7805, 11.7558 )
 texture = ExtResource( 5 )
 [connection signal="pressed" from="Layout/Main/Buttons/Start Game Button" to="Layout/Main/Buttons/Start Game Button" method="_on_Start_Game_Button_pressed"]
