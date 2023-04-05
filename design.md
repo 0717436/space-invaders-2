@@ -39,4 +39,13 @@ gantt
     section Design
     Project Overview:05-04-23, 1d
     Project Plan:05-04-23, 1d
+    
+    section Implementation
+    Ui:06-04-23, 1d
+    Enemy types:06-04-23, 1d
+    Shop Menu:06-04-23, 1d
+    Boss Battles:06-04-23, 1d
+
+    section testing
+    Playtesing:07-04-23, 1d
 ```
