@@ -6,7 +6,7 @@ the space craft is a blue spacecraft with simalar looks to the original space in
 
 ![Blue Spaceship](Images/SpaceShip.png)
 
-blue SpaceCraft
+blue Space Craft
 
 ![Alien](Images/alienHeads.png)
 
@@ -29,7 +29,7 @@ There will be different types of enemies in the main game. each with their diffe
 
 ```mermaid
 journey
-title Login / Log off
+title Full Game Experience
     section Menu
         Press Start: 5
     section Start Game
