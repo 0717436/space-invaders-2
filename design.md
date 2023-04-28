@@ -22,30 +22,53 @@ After the player complete a game session, the player will earn points. the amoun
 ### New Weapons and Weapon Shop
 There will be a shop button on the main menu. it leads to a menu of different weapons which can be bought with points. when the player starts the game they will be equipped with the generic laser. then will be able to buy weapons like rocket launchers (shoots explosion and takes out enemies), bomb (like rocket launcher but slower and more impactful), speed lasers (shoots faster then generic laser), shotgun laser (shoot out laser in burst), and an AK-47 (Insta-kills anything)
 ### Emeny Types
-
+There will be different types of enemies in the main game. each with their different abilities. 
 ### Enemy Health
 
 # Behaviour - User Journey
 
+```mermaid
+journey
+title Login / Log off
+    section Menu
+        Press Start: 5
+    section Start Game
+        Level starts:5
+        Shoot enemies:5
+        Level Ends:5
+        Repeat:5
+    section Lose
+        Game Over Screen:5
+        Shop Menu:5
+        Back To Start:5
+    section Quit
+        Close Game:5
+```
 # Planning Diagram
 
 ```mermaid
 gantt
     title Space Invaders Plan
-    dateFormat DD-MM-YY
-    axisFormat %d-%B
-    tickInterval 1week
+dateFormat DD-MM-YY
+axisFormat %d-%B
+tickInterval 1week
 
-    section Design
-    Project Overview:05-04-23, 1d
-    Project Plan:05-04-23, 1d
-    
-    section Implementation
-    Ui:06-04-23, 1d
-    Enemy types:06-04-23, 1d
-    Shop Menu:06-04-23, 1d
-    Boss Battles:06-04-23, 1d
+section Design
+Project Overview: 24-04-23, 26-04-23
+Project Plan: 24-04-23, 27-04-23
+Behaviours: 29-04-23, 1d
+Programming Logic: 30-04-23, 1d 
 
-    section testing
-    Playtesing:07-04-23, 1d
+section Implementation
+Ui: 30-04-23, 04-05-23
+Level system: 04-05-23, 11-05-23
+Enemy types: 11-05-23, 18-05-23
+Shop Menu: 18-05-23, 25-05-23
+Boss Battles: 25-05-23, 7d
+
+section testing
+Playtesing: 30-04-23, 07-06-23
+
+section sumbit
+Sumbit: 07-06-23, 1d
 ```
