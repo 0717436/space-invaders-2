@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Menu/DePixelSchmal.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menu/Options.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Images/Amongus.jpg" type="Texture" id=5]
 [ext_resource path="res://Menu/Quit.gd" type="Script" id=6]
 [ext_resource path="res://Menu/Menu.gd" type="Script" id=7]
+[ext_resource path="res://Menu/Shop.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
@@ -59,7 +60,7 @@ size_flags_vertical = 3
 
 [node name="Start Game Button" type="Button" parent="Layout/Main/Buttons"]
 margin_right = 1280.0
-margin_bottom = 209.0
+margin_bottom = 155.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
@@ -67,9 +68,9 @@ text = "START GAME"
 script = ExtResource( 4 )
 
 [node name="Options" type="Button" parent="Layout/Main/Buttons"]
-margin_top = 213.0
+margin_top = 159.0
 margin_right = 1280.0
-margin_bottom = 422.0
+margin_bottom = 314.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 3 )
@@ -79,9 +80,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Shop" type="Button" parent="Layout/Main/Buttons"]
+margin_top = 318.0
+margin_right = 1280.0
+margin_bottom = 473.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+text = "Shop"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Quit" type="Button" parent="Layout/Main/Buttons"]
 modulate = Color( 0.992157, 0, 0, 1 )
-margin_top = 426.0
+margin_top = 477.0
 margin_right = 1280.0
 margin_bottom = 635.0
 size_flags_horizontal = 3
@@ -102,9 +116,10 @@ text = "Copyright Max Shoe 2023"
 
 [node name="Sprite" type="Sprite" parent="Layout"]
 show_behind_parent = true
-position = Vector2( 644.434, 352.288 )
+position = Vector2( 655.541, 338.008 )
 scale = Vector2( 13.7805, 11.7558 )
 texture = ExtResource( 5 )
 [connection signal="pressed" from="Layout/Main/Buttons/Start Game Button" to="Layout/Main/Buttons/Start Game Button" method="_on_Start_Game_Button_pressed"]
 [connection signal="pressed" from="Layout/Main/Buttons/Options" to="Layout/Main/Buttons/Options" method="_on_Options_pressed"]
+[connection signal="pressed" from="Layout/Main/Buttons/Shop" to="Layout/Main/Buttons/Shop" method="_on_Shop_pressed"]
 [connection signal="pressed" from="Layout/Main/Buttons/Quit" to="Layout/Main/Buttons/Quit" method="_on_Quit_pressed"]
