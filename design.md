@@ -22,7 +22,7 @@ After the player complete a game session, the player will earn points. the amoun
 ### New Weapons and Weapon Shop
 There will be a shop button on the main menu. it leads to a menu of different weapons which can be bought with points. when the player starts the game they will be equipped with the generic laser. then will be able to buy weapons like rocket launchers (shoots explosion and takes out enemies), bomb (like rocket launcher but slower and more impactful), speed lasers (shoots faster then generic laser), shotgun laser (shoot out laser in burst), and an AK-47 (Insta-kills anything)
 ### Emeny Types
-There will be different types of enemies in the main game. each with their different abilities. 
+There will be different types of enemies in the main game. each with their different abilities. one of them will have higher speed than usual but have less health. another alien will be slower but bigger health.
 ### Enemy Health
 
 # Behaviour - User Journey

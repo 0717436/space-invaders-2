@@ -36,7 +36,7 @@ __meta__ = {
 [node name="Countdown" type="Label" parent="HUD"]
 modulate = Color( 1, 0, 0, 1 )
 margin_top = 13.0
-margin_bottom = 43.0
+margin_bottom = 27.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -216,3 +216,6 @@ show_behind_parent = true
 position = Vector2( 642.217, 347.632 )
 scale = Vector2( 0.695138, 0.72911 )
 texture = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
