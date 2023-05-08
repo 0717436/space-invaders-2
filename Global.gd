@@ -9,6 +9,8 @@ var automaticFiring = false
 
 var hardMode = false
 
+var shipRotation = 0
+
 var scoringInformation = {
 	"currentScore": 0,
 	"currentPlayer": "User",
