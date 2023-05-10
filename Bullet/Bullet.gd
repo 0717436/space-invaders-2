@@ -8,7 +8,7 @@ func _ready():
 	set_physics_process(true)
 
 func _physics_process(delta):
-	if Input.is_action_pressed("ui_up"):
+	if GlobalVariables.shipRotation == 0:
 		var collidedObject = move_and_collide(Vector2(0, -speed*delta))
 		if (collidedObject):
 			print(collidedObject.collider.name)
@@ -17,7 +17,7 @@ func _physics_process(delta):
 				GlobalVariables.scoringInformation["currentScore"] +=100
 			queue_free()
 			GlobalVariables.bulletInstanceCount -= 1
-	if Input.is_action_pressed("ui_down"):
+	if GlobalVariables.shipRotation == 180:
 		var collidedObject = move_and_collide(Vector2(0, speed*delta))
 		if (collidedObject):
 			print(collidedObject.collider.name)
@@ -26,7 +26,7 @@ func _physics_process(delta):
 				GlobalVariables.scoringInformation["currentScore"] +=100
 			queue_free()
 			GlobalVariables.bulletInstanceCount -= 1
-	if Input.is_action_pressed("ui_left"):
+	if GlobalVariables.shipRotation == -90:
 		var collidedObject = move_and_collide(Vector2(-speed*delta, 0))
 		if (collidedObject):
 			print(collidedObject.collider.name)
@@ -35,7 +35,7 @@ func _physics_process(delta):
 				GlobalVariables.scoringInformation["currentScore"] +=100
 			queue_free()
 			GlobalVariables.bulletInstanceCount -= 1
-	if Input.is_action_pressed("ui_right"):
+	if GlobalVariables.shipRotation == 90:
 		var collidedObject = move_and_collide(Vector2(speed*delta, 0))
 		if (collidedObject):
 			print(collidedObject.collider.name)
