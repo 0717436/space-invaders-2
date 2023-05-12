@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,9 +7,6 @@
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Images/space.jpg" type="Texture" id=7]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20.9622, 380.576 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 662.058, 10 )
@@ -57,28 +54,6 @@ margin_right = 102.0
 margin_bottom = 27.0
 text = "0"
 
-[node name="Border_Left" type="Area2D" parent="." groups=[
-"left",
-]]
-position = Vector2( -1.53629, 369.479 )
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -5.37704, -0.768158 )
-shape = SubResource( 1 )
-
-[node name="Border_Right" type="Area2D" parent="." groups=[
-"right",
-]]
-position = Vector2( 1287.42, 368.711 )
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
-position = Vector2( -5.37704, -0.768158 )
-shape = SubResource( 1 )
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 642.94, 669.056 )
 
@@ -90,6 +65,36 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=[
+"top",
+]]
+position = Vector2( 0, 1 )
+shape = SubResource( 2 )
+
+[node name="Border_Left" type="KinematicBody2D" parent="." groups=[
+"left",
+]]
+position = Vector2( 1, 350 )
+rotation = 1.5708
+scale = Vector2( 0.6, 2 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Left" groups=[
+"top",
+]]
+position = Vector2( 0, 1 )
+shape = SubResource( 2 )
+
+[node name="Border_Right" type="KinematicBody2D" parent="." groups=[
+"right",
+]]
+position = Vector2( 1285, 350 )
+rotation = 1.5708
+scale = Vector2( 0.6, 2 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Right" groups=[
 "top",
 ]]
 position = Vector2( 0, 1 )

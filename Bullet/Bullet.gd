@@ -10,6 +10,7 @@ func _ready():
 func _physics_process(delta):
 	if GlobalVariables.shipRotation == 0:
 		var collidedObject = move_and_collide(Vector2(0, -speed*delta))
+		self.rotation_degrees = GlobalVariables.shipRotation
 		if (collidedObject):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:
@@ -19,6 +20,7 @@ func _physics_process(delta):
 			GlobalVariables.bulletInstanceCount -= 1
 	if GlobalVariables.shipRotation == 180:
 		var collidedObject = move_and_collide(Vector2(0, speed*delta))
+		self.rotation_degrees = GlobalVariables.shipRotation
 		if (collidedObject):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:
@@ -28,6 +30,7 @@ func _physics_process(delta):
 			GlobalVariables.bulletInstanceCount -= 1
 	if GlobalVariables.shipRotation == -90:
 		var collidedObject = move_and_collide(Vector2(-speed*delta, 0))
+		self.rotation_degrees = GlobalVariables.shipRotation
 		if (collidedObject):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:
@@ -37,6 +40,7 @@ func _physics_process(delta):
 			GlobalVariables.bulletInstanceCount -= 1
 	if GlobalVariables.shipRotation == 90:
 		var collidedObject = move_and_collide(Vector2(speed*delta, 0))
+		self.rotation_degrees = GlobalVariables.shipRotation
 		if (collidedObject):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:

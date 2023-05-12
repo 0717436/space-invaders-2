@@ -12,14 +12,14 @@ func _process(delta):
 		if Input.is_action_pressed("fire"):
 			if GlobalVariables.bulletInstanceCount < 100:
 				var bulletInstance = bulletSource.instance()
-				bulletInstance.position = Vector2(position.x, position.y-20)
+				bulletInstance.position = Vector2(position.x, position.y)
 				get_tree().get_root().add_child(bulletInstance)
 				yield()
 	
 	elif Input.is_action_just_pressed("fire"):
 		if GlobalVariables.bulletInstanceCount < 3:
 			var bulletInstance = bulletSource.instance()
-			bulletInstance.position = Vector2(position.x, position.y-20)
+			bulletInstance.position = Vector2(position.x, position.y)
 			get_tree().get_root().add_child(bulletInstance)
 		
 func _physics_process(delta):
