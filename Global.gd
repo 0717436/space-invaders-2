@@ -11,6 +11,8 @@ var hardMode = false
 
 var shipRotation = 0
 
+var playerLocation = Vector2(0, 0)
+
 var scoringInformation = {
 	"currentScore": 0,
 	"currentPlayer": "User",
@@ -22,3 +24,5 @@ var previousScores = [203,20,245,13,199]
 
 func calculateAverageScore():
 	var _average = previousScores
+
+var enemyPosition = Vector2(0, 0)

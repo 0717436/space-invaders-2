@@ -1,26 +1,12 @@
 extends KinematicBody2D
 
-var bullet = preload("res://Bullet-Enemy/Bullet-Enemy.tscn")
+var speed = 200
+var player_position
+var target_position
 
-func _ready():
-	$Area2D.connect("area_entered", self, "_colliding")
+func _physics_process(delta):
+	player_position = GlobalVariables.playerLocation
+	target_position = (player_position - position).normalized()
 	
-	
-func _colliding(area):
-	if area.is_in_group("right"):
-		get_parent().global_position.y += 10
-		get_parent().speed = get_parent().speed * -1
-	if area.is_in_group("left"):
-		get_parent().global_position.y += 10
-		get_parent().speed = get_parent().speed * -1
-		
-func _process(delta):
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var my_random_number = rng.randf_range(2.0,30.0)
-	yield(get_tree().create_timer(my_random_number), "timeout")
-	if GlobalVariables.enemyBulletInstanceCount < 5:
-		var bulletInstance = bullet.instance()
-		
-		bulletInstance.position = Vector2(global_position.x, global_position.y+20)
-		get_tree().get_root().add_child(bulletInstance)
+	if position.distance_to(player_position) > 1:
+		move_and_slide(target_position * speed)

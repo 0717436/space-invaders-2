@@ -7,7 +7,11 @@ func _ready():
 	set_process(true)
 	set_physics_process(true)
 
+
 func _process(delta):
+	
+	GlobalVariables.playerLocation = self.position
+	
 	if GlobalVariables.automaticFiring:
 		if Input.is_action_pressed("fire"):
 			if GlobalVariables.bulletInstanceCount < 100:

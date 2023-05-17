@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MainGame/Timer.gd" type="Script" id=3]
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
-[ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Images/Amongus.jpg" type="Texture" id=7]
 
@@ -24,106 +23,6 @@ position = Vector2( 642.94, 669.056 )
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 current = true
-
-[node name="Enemies" type="Node2D" parent="."]
-position = Vector2( 705.16, 3.84076 )
-script = ExtResource( 5 )
-
-[node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 226.241, 73.6566 )
-
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 332.707, 74.3564 )
-
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 7.31857, 74.4248 )
-
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 116.089, 74.3564 )
-
-[node name="Enemy5" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -206.995, 74.4248 )
-
-[node name="Enemy6" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -98.2243, 74.3564 )
-
-[node name="Enemy7" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -423.612, 74.4248 )
-
-[node name="Enemy8" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -314.842, 74.3564 )
-
-[node name="Enemy9" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 227.543, 185.855 )
-
-[node name="Enemy10" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 334.009, 186.555 )
-
-[node name="Enemy11" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 8.62097, 186.623 )
-
-[node name="Enemy12" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 117.391, 186.555 )
-
-[node name="Enemy13" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -205.692, 186.623 )
-
-[node name="Enemy14" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -96.922, 186.555 )
-
-[node name="Enemy15" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -422.31, 186.623 )
-
-[node name="Enemy16" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -313.54, 186.555 )
-
-[node name="Enemy17" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 223.936, 294.115 )
-
-[node name="Enemy18" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 330.402, 294.815 )
-
-[node name="Enemy19" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 5.01413, 294.883 )
-
-[node name="Enemy20" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 113.785, 294.815 )
-
-[node name="Enemy21" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -209.299, 294.883 )
-
-[node name="Enemy22" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -100.529, 294.815 )
-
-[node name="Enemy23" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -425.917, 294.883 )
-
-[node name="Enemy24" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -317.146, 294.815 )
-
-[node name="Enemy25" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 223.947, 402.436 )
-
-[node name="Enemy26" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 330.413, 403.136 )
-
-[node name="Enemy27" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 5.02466, 403.205 )
-
-[node name="Enemy28" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 113.795, 403.136 )
-
-[node name="Enemy29" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -209.289, 403.205 )
-
-[node name="Enemy30" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -100.518, 403.136 )
-
-[node name="Enemy31" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -424.706, 403.205 )
-
-[node name="Enemy32" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -317.136, 403.136 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
@@ -153,8 +52,8 @@ __meta__ = {
 
 [node name="Countdown" type="Label" parent="HUD"]
 modulate = Color( 1, 0, 0, 1 )
-margin_top = 13.0
-margin_bottom = 27.0
+margin_top = 12.0
+margin_bottom = 26.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -162,15 +61,20 @@ __meta__ = {
 [node name="CurrentScoreLabel" type="Label" parent="HUD"]
 modulate = Color( 1, 0, 0, 1 )
 margin_left = 4.0
-margin_top = 13.0
+margin_top = 12.0
 margin_right = 90.0
-margin_bottom = 27.0
+margin_bottom = 26.0
 text = "Current Score"
 
 [node name="CurrentScore" type="Label" parent="HUD"]
 modulate = Color( 1, 0, 0, 1 )
 margin_left = 94.0
-margin_top = 13.0
+margin_top = 12.0
 margin_right = 102.0
-margin_bottom = 27.0
+margin_bottom = 26.0
 text = "0"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource( 3 )
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
