@@ -26,3 +26,5 @@ func calculateAverageScore():
 	var _average = previousScores
 
 var enemyPosition = Vector2(0, 0)
+
+var EnemyCount = 0

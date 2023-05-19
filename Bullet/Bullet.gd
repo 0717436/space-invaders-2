@@ -14,6 +14,7 @@ func _physics_process(delta):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:
 				collidedObject.get_collider().queue_free()
+				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
 				GlobalVariables.scoringInformation["currentScore"] +=100
 			queue_free()
 	if GlobalVariables.shipRotation == 180:
@@ -23,6 +24,7 @@ func _physics_process(delta):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:
 				collidedObject.get_collider().queue_free()
+				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
 				GlobalVariables.scoringInformation["currentScore"] +=100
 			queue_free()
 	if GlobalVariables.shipRotation == -90:
@@ -32,6 +34,7 @@ func _physics_process(delta):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:
 				collidedObject.get_collider().queue_free()
+				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
 				GlobalVariables.scoringInformation["currentScore"] +=100
 			queue_free()
 	if GlobalVariables.shipRotation == 90:
@@ -41,6 +44,7 @@ func _physics_process(delta):
 			print(collidedObject.collider.name)
 			if "Enemy" in collidedObject.collider.name:
 				collidedObject.get_collider().queue_free()
+				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
 				GlobalVariables.scoringInformation["currentScore"] +=100
 			queue_free()
 			

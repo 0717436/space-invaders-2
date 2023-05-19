@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://MainGame/Timer.gd" type="Script" id=3]
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Images/Amongus.jpg" type="Texture" id=7]
@@ -73,8 +72,3 @@ margin_top = 12.0
 margin_right = 102.0
 margin_bottom = 26.0
 text = "0"
-
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-script = ExtResource( 3 )
-[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
