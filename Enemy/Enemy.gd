@@ -18,7 +18,10 @@ func _process(delta):
 	rng.randomize()
 	var my_random_number = rng.randf_range(2.0, 30.0)
 	yield(get_tree().create_timer(my_random_number), "timeout")
-	if GlobalVariables.enemyBulletInstanceCount < 5:
+	if GlobalVariables.enemyBulletInstanceCount < 100:
 		var bulletInstance = bullet.instance()
+		GlobalVariables.enemyBulletInstanceCount = GlobalVariables.enemyBulletInstanceCount + 1
 		bulletInstance.position = Vector2(global_position.x, global_position.y)
+		bulletInstance.look_at(player_position)
+		bulletInstance.apply_impulse(Vector2(), Vector2())
 		get_tree().get_root().add_child(bulletInstance)
