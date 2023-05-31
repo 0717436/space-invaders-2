@@ -8,6 +8,7 @@ func _ready():
 
 func _physics_process(delta):
 	if GlobalVariables.shipRotation == 0:
+		rotation_degrees = 0
 		var collidedObject = move_and_collide(Vector2(0, -speed*delta))
 		self.rotation_degrees = GlobalVariables.shipRotation
 		if (collidedObject):

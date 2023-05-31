@@ -23,5 +23,4 @@ func _process(delta):
 		GlobalVariables.enemyBulletInstanceCount = GlobalVariables.enemyBulletInstanceCount + 1
 		bulletInstance.position = Vector2(global_position.x, global_position.y)
 		bulletInstance.look_at(player_position)
-		bulletInstance.apply_impulse(Vector2(), Vector2())
 		get_tree().get_root().add_child(bulletInstance)

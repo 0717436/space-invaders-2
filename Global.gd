@@ -28,3 +28,5 @@ func calculateAverageScore():
 var enemyPosition = Vector2(0, 0)
 
 var EnemyCount = 0
+
+var bulletrotation = 0
