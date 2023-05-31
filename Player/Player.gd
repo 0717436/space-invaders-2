@@ -3,6 +3,7 @@ extends KinematicBody2D
 var movement_speed = 500
 var bulletSource = preload("res://Bullet/Bullet.tscn")
 
+
 func _ready():
 	set_process(true)
 	set_physics_process(true)
@@ -28,18 +29,15 @@ func _process(delta):
 		
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
-		move_and_collide(Vector2(-movement_speed * delta, 0))
-		self.rotation_degrees = -90
-		GlobalVariables.shipRotation = rotation_degrees
+		rotation = rotation + 0.1
 	if Input.is_action_pressed("ui_right"):
-		move_and_collide(Vector2(movement_speed * delta, 0))
-		self.rotation_degrees = 90
-		GlobalVariables.shipRotation = rotation_degrees
+		rotation = rotation - 0.1
+		
+	
+	var velocity = Vector2.ZERO
+	
 	if Input.is_action_pressed("ui_up"):
-		move_and_collide(Vector2(0, -movement_speed * delta))
-		self.rotation_degrees = 0
-		GlobalVariables.shipRotation = rotation_degrees
-	if Input.is_action_pressed("ui_down"):
-		move_and_collide(Vector2(0, movement_speed * delta))
-		self.rotation_degrees = 180
-		GlobalVariables.shipRotation = rotation_degrees
+		velocity = Vector2.UP.rotated(rotation) * movement_speed
+	
+	position += velocity * delta
+	
