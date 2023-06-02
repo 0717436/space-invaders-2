@@ -18,6 +18,7 @@ func _process(delta):
 			if GlobalVariables.bulletInstanceCount < 100:
 				var bulletInstance = bulletSource.instance()
 				bulletInstance.position = Vector2(position.x, position.y)
+				bulletInstance.velocity = get_global_mouse_position() - bulletInstance.positon
 				get_tree().get_root().add_child(bulletInstance)
 				yield()
 	
@@ -25,19 +26,25 @@ func _process(delta):
 		if GlobalVariables.bulletInstanceCount < 3:
 			var bulletInstance = bulletSource.instance()
 			bulletInstance.position = Vector2(position.x, position.y)
+			bulletInstance.velocity = get_global_mouse_position() - bulletInstance.position
 			get_tree().get_root().add_child(bulletInstance)
-		
+	if position.x < -14000:
+		get_tree().change_scene("res://Menu/Menu.tscn")
+	if position.x > 14000:
+		get_tree().change_scene("res://Menu/Menu.tscn")
+	if position.y > 14000:
+		get_tree().change_scene("res://Menu/Menu.tscn")
+	if position.y < -14000:
+		get_tree().change_scene("res://Menu/Menu.tscn")
+
 func _physics_process(delta):
-	if Input.is_action_pressed("ui_left"):
-		rotation = rotation + 0.1
-	if Input.is_action_pressed("ui_right"):
-		rotation = rotation - 0.1
-		
-	
+	look_at(get_global_mouse_position())
 	var velocity = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_up"):
-		velocity = Vector2.UP.rotated(rotation) * movement_speed
+		velocity = Vector2.RIGHT.rotated(rotation) * movement_speed
+	if Input.is_action_pressed("ui_down"):
+		velocity = Vector2.LEFT.rotated(rotation) * movement_speed
 	
 	position += velocity * delta
 	

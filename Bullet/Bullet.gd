@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+var velocity = Vector2(0,-1)
 var speed = 2000
 
 # Called when the node enters the scene tree for the first time.
@@ -7,45 +7,17 @@ func _ready():
 	set_physics_process(true)
 
 func _physics_process(delta):
-	if GlobalVariables.shipRotation == 0:
-		rotation_degrees = 0
-		var collidedObject = move_and_collide(Vector2(0, -speed*delta))
-		self.rotation_degrees = GlobalVariables.shipRotation
-		if (collidedObject):
-			print(collidedObject.collider.name)
-			if "Enemy" in collidedObject.collider.name:
-				collidedObject.get_collider().queue_free()
-				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
-				GlobalVariables.scoringInformation["currentScore"] +=100
+	look_at(get_global_mouse_position())
+	var collidedObject = move_and_collide(velocity.normalized() * delta * speed)
+	if (collidedObject):
+		if "Enemy" in collidedObject.collider.name:
+			collidedObject.get_collider().queue_free()
 			queue_free()
-	if GlobalVariables.shipRotation == 180:
-		var collidedObject = move_and_collide(Vector2(0, speed*delta))
-		self.rotation_degrees = GlobalVariables.shipRotation
-		if (collidedObject):
-			print(collidedObject.collider.name)
-			if "Enemy" in collidedObject.collider.name:
-				collidedObject.get_collider().queue_free()
-				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
-				GlobalVariables.scoringInformation["currentScore"] +=100
-			queue_free()
-	if GlobalVariables.shipRotation == -90:
-		var collidedObject = move_and_collide(Vector2(-speed*delta, 0))
-		self.rotation_degrees = GlobalVariables.shipRotation
-		if (collidedObject):
-			print(collidedObject.collider.name)
-			if "Enemy" in collidedObject.collider.name:
-				collidedObject.get_collider().queue_free()
-				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
-				GlobalVariables.scoringInformation["currentScore"] +=100
-			queue_free()
-	if GlobalVariables.shipRotation == 90:
-		var collidedObject = move_and_collide(Vector2(speed*delta, 0))
-		self.rotation_degrees = GlobalVariables.shipRotation
-		if (collidedObject):
-			print(collidedObject.collider.name)
-			if "Enemy" in collidedObject.collider.name:
-				collidedObject.get_collider().queue_free()
-				GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
-				GlobalVariables.scoringInformation["currentScore"] +=100
-			queue_free()
-			
+	if position.x < -14000:
+		queue_free()
+	if position.x > 14000:
+		queue_free()
+	if position.y > 14000:
+		queue_free()
+	if position.y < -14000:
+		queue_free()
