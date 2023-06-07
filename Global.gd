@@ -27,6 +27,8 @@ func calculateAverageScore():
 
 var enemyPosition = Vector2(0, 0)
 
-var EnemyCount = 0
+var enemyCount = 0
 
-var bulletrotation = 0
+var bulletRotation = 0
+
+var playerOnScreen = "res://Player/Player.tscn"

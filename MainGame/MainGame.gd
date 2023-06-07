@@ -14,7 +14,7 @@ var packed_scene = [
 
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-	if GlobalVariables.EnemyCount < 30:
+	if GlobalVariables.enemyCount < 30:
 		randomize()
 		var x = randi() % packed_scene.size()
 		location.x = rand_range(-14000, 14000)
@@ -22,5 +22,5 @@ func _process(delta):
 		var scene = packed_scene[x].instance()
 		scene.position = location
 		add_child(scene)
-		GlobalVariables.EnemyCount = GlobalVariables.EnemyCount + 1
+		GlobalVariables.enemyCount = GlobalVariables.enemyCount + 1
 

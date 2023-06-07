@@ -12,7 +12,7 @@ func _physics_process(delta):
 	if (collidedObject):
 		if "Enemy" in collidedObject.collider.name:
 			collidedObject.get_collider().queue_free()
-			GlobalVariables.EnemyCount = GlobalVariables.EnemyCount - 1
+			GlobalVariables.enemyCount = GlobalVariables.enemyCount - 1
 			queue_free()
 	if position.x < -14000:
 		queue_free()
@@ -21,4 +21,6 @@ func _physics_process(delta):
 	if position.y > 14000:
 		queue_free()
 	if position.y < -14000:
+		queue_free()
+	if GlobalVariables.playerOnScreen == null:
 		queue_free()
