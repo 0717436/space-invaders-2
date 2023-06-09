@@ -9,6 +9,8 @@ var automaticFiring = false
 
 var hardMode = false
 
+var catMode = false
+
 var shipRotation = 0
 
 var playerLocation = Vector2(0, 0)
@@ -32,3 +34,5 @@ var enemyCount = 0
 var bulletRotation = 0
 
 var playerOnScreen = "res://Player/Player.tscn"
+
+var Menu = "res://Menu/Menu.tscn"

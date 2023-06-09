@@ -9,3 +9,7 @@ func _process(delta):
 	if GlobalVariables.automaticFiring:
 		get_parent().get_property_list().find(pressed)
 		pressed = true
+
+
+func _on_CatMode_pressed():
+	pass # Replace with function body.

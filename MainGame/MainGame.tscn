@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MainGame/TextureRect.gd" type="Script" id=3]
 [ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Images/Amongus.jpg" type="Texture" id=7]
@@ -35,6 +36,7 @@ margin_right = 14000.0
 margin_bottom = 14000.0
 texture = ExtResource( 7 )
 stretch_mode = 2
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

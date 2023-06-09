@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Images/alienHeads.png" type="Texture" id=1]
 [ext_resource path="res://Enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://Enemy/Sprite.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 43.3061, 40.9474 )
@@ -25,6 +26,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, 2.11273 )
 scale = Vector2( 0.044879, 0.04196 )
 texture = ExtResource( 1 )
+script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
