@@ -11,3 +11,5 @@ func _process(delta):
 		self.set_texture(catTexture)
 	else:
 		self.set_texture(alienTexture)
+
+# if cat mode is on, change texture of sprite to cat

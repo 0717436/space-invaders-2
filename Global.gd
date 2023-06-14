@@ -1,38 +1,32 @@
 extends Node
 
-var bulletInstanceCount = 0 # Keeps track of how many bullet instances are current
-var enemyBulletInstanceCount = 0
+var bulletInstanceCount = 0
 
-var saveFile = "user://save.dat"
+var enemyBulletInstanceCount = 0 # Keeps track of how many enemy bullet there are
 
-var automaticFiring = false
+var saveFile = "user://save.dat" # the users saved data
 
-var hardMode = false
+var automaticFiring = false # keeps track of automatic firing
 
-var catMode = false
+var hardMode = false # keeps track of hard mode
 
-var shipRotation = 0
+var catMode = false # keeps track of cat mode
 
-var playerLocation = Vector2(0, 0)
+var shipRotation = 0 # keeps track of the rotation of the player
+
+var playerLocation = Vector2(0, 0) # keeps track of the postion of the player
 
 var scoringInformation = {
 	"currentScore": 0,
 	"currentPlayer": "User",
 	"highScores": 0,
 	"highScorePlayersName": "Winner"
-}
+} # keeps track of the players information
 
-var previousScores = [203,20,245,13,199]
+var enemyPosition = Vector2(0, 0) # keeps track of the postion of the enemy
 
-func calculateAverageScore():
-	var _average = previousScores
+var enemyCount = 0 # keeps track of how many enemies are on the screen
 
-var enemyPosition = Vector2(0, 0)
+var playerOnScreen = "res://Player/Player.tscn" # the player if on screen
 
-var enemyCount = 0
-
-var bulletRotation = 0
-
-var playerOnScreen = "res://Player/Player.tscn"
-
-var Menu = "res://Menu/Menu.tscn"
+var Menu = "res://Menu/Menu.tscn" # the menu if on screen

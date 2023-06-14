@@ -2,7 +2,7 @@ extends KinematicBody2D
 var velocity = Vector2(0,-1)
 var speed = 2000
 
-# variables is locatred on top so the code knows what it means to have the variables written, the variables are written in Lower Camel Case to find it easier to differentiate from functions.
+# variables is located on top so the code knows what it means to have the variables written, the variables are written in Lower Camel Case to find it easier to differentiate from functions.
 
 func _ready():
 	set_physics_process(true)

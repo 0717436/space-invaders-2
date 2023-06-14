@@ -5,6 +5,8 @@ var currentTimer
 var player_position
 var target_position
 
+# variables is located on top so the code knows what it means to have the variables written, the variables are written in Lower Camel Case to find it easier to differentiate from functions.
+
 var location = Vector2()
 var packed_scene = [
 	preload("res://Enemy/Enemy.tscn")
@@ -13,7 +15,6 @@ var packed_scene = [
 
 
 func _process(delta):
-	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if GlobalVariables.enemyCount < 30:
 		randomize()
 		var x = randi() % packed_scene.size()

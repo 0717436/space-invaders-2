@@ -3,7 +3,7 @@ extends KinematicBody2D
 var speed = 500
 var velocity
  
-# variables is locatred on top so the code knows what it means to have the variables written, the variables are written in Lower Camel Case to find it easier to differentiate from functions.
+# variables is locateed on top so the code knows what it means to have the variables written, the variables are written in Lower Camel Case to find it easier to differentiate from functions.
 
 func _ready():
 	set_physics_process(true)

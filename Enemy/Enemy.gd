@@ -4,8 +4,6 @@ var speed = 5
 var playerPosition
 var targetPosition
 var bullet = preload("res://Bullet-Enemy/Bullet-Enemy.tscn")
-var catTexture = preload("res://Images/20230608_185817.tex")
-var alienTexture = preload("res://Images/alienHeads.png")
 
 # variables is locatred on top so the code knows what it means to have the variables written, the variables are written in Lower Camel Case to find it easier to differentiate from functions.
 
