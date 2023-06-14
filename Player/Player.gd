@@ -18,7 +18,7 @@ func _process(delta):
 			if GlobalVariables.bulletInstanceCount < 100:
 				var bulletInstance = bulletSource.instance()
 				bulletInstance.position = Vector2(position.x, position.y)
-				bulletInstance.velocity = get_global_mouse_position() - bulletInstance.positon
+				bulletInstance.velocity = get_global_mouse_position() - bulletInstance.position
 				get_tree().get_root().add_child(bulletInstance)
 				yield()
 	

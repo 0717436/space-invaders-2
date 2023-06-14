@@ -2,9 +2,12 @@ extends KinematicBody2D
 var velocity = Vector2(0,-1)
 var speed = 2000
 
-# Called when the node enters the scene tree for the first time.
+# variables is locatred on top so the code knows what it means to have the variables written, the variables are written in Lower Camel Case to find it easier to differentiate from functions.
+
 func _ready():
 	set_physics_process(true)
+
+# sets physics process to true
 
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
@@ -24,3 +27,5 @@ func _physics_process(delta):
 		queue_free()
 	if GlobalVariables.playerOnScreen == null:
 		queue_free()
+
+# the player bullet looks at the mouse position and moves towards it, if the enemy is hit with the bullet the enemy is removed.
